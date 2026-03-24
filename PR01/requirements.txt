@@ -1,0 +1,18 @@
+pymysql
+ttkbootstrap
+selenium
+webdriver-manager
+pandas
+openpyxl
+Pillow
+selenium
+webdriver-manager
+requests
+packaging
+
+
+python -m PyInstaller --noconfirm --clean --onefile --windowed --name "Confortec App" --icon "assets/logo.ico" launcher.py
+
+
+python -m PyInstaller --noconfirm --clean --onefile --windowed --name "confortec_system" --icon "assets/logo.ico" --add-data "assets;assets" --collect-all "ttkbootstrap" --hidden-import "pymysql" --hidden-import "reportlab" --hidden-import "pypdf" --hidden-import "pywhatkit" --exclude-module "PySide6" "main_app.py"
+
